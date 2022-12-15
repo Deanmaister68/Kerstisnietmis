@@ -7,3 +7,5 @@ else:
     print("Barkeeper: Not someone who likes a nice ale are ya.")
     
 print("Barkeeper: Well traveller, what is you're story?")
+
+print(Input_playername + ": One day I was going for a walk in the woods till I heard a scream  coming from the house where me and hmy family lived. When I came back, I saw a horrific sight of my wife and children slaughtert by the orders of the evil king. Filled with rage I picked up an iron sword my father left me and started my quest of revenge. ")
