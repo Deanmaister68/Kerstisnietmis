@@ -1,8 +1,9 @@
 #test for combat input to main file
+
 start =input("you wanne fight? y/n ")
 
 if start == "y":
-    import combat1
+    from combat1 import main
 else:
     print("to bad.")
 

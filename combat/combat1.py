@@ -5,8 +5,6 @@
 
 import random
 import sys
-
-
 def main():
     """Main function that will welcome the player to combat."""
 
@@ -165,7 +163,7 @@ def main():
             print("................................................................................")
             print("................................................................................")
             print("................................................................................")
-            print("???: Sow you lost... I thought you were thougher than this but weaklings dissepoint")
+            print("???: Sow you lost... I thought you" + inputplayer + "were thougher than this but weaklings dissepoint")
             print("???: But you wil get an other chance...")
             print("???: Restart your world and you will get your second chance... Dont waste it...")
             sys.exit()
