@@ -2,8 +2,9 @@
 start =input("you wanne fight? y/n")
 
 if start == "y":
-    import combat
+    import combat1
 else:
     print("to bad.")
 
+print('tester')
 # conlusion it worked
