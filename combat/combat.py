@@ -7,10 +7,9 @@ import random
 
 
 def main():
-    """Main function that will welcome the player to the game."""
+    """Main function that will welcome the player to combat."""
 
-    print("\tWelcome to Battle Sim! This is a turn based combat simulator where")
-    print("\tthere can only be one winner.")
+
 
     print("\nHow to play.\n\nPlayers take turn to choose a move. Moves can either deal moderate damage")
     print("with a low range, deal high damage but over a wide")
@@ -50,16 +49,19 @@ def main():
             miss = False # determine if the chosen move will miss.
 
             # create a dictionary of the possible moves and randomly select the damage it does when selected
-            moves = {"Punch": random.randint(18, 25),
+            moves = {"Sword slash": random.randint(18, 25),
+                     "Firebolt": random.randint(10, 35),
+                     "Heal": random.randint(20, 25),
+                     "Punch": random.randint(18, 25),
                      "Mega Punch": random.randint(10, 35),
                      "Heal": random.randint(20, 25)}
 
             if player_turn:
-                print("\nPlease select a move:\n1. Punch (Deal damage between 18-25)\n2. Mega Punch (Deal damage between 10-35)\n3. Heal (Restore between 20-25 health)\n")
+                print("\nPlease select a move:\n1. Sword slash (Deal damage between 18-25)\n2. Firebolt (Deal damage between 10-35)\n3. Heal (Restore between 20-25 health)\n")
 
                 player_move = input("> ").lower()
 
-                move_miss = random.randint(1,5) # 20% of missing
+                move_miss = random.randint(1,10) # 10% of missing
                 if move_miss == 1:
                     miss = True
                 else:
@@ -69,12 +71,12 @@ def main():
                     player_move = 0 # player misses and deals no damage
                     print("You missed!")
                 else:
-                    if player_move in ("1", "punch"):
-                        player_move = moves["Punch"]
-                        print("\nYou used Punch. It dealt ", player_move, " damage.")
-                    elif player_move in ("2", "mega punch"):
+                    if player_move in ("1", "Sword slash"):
+                        player_move = moves["Sword slash"]
+                        print("\nYou used sword slash. It dealt ", player_move, " damage.")
+                    elif player_move in ("2", "firebolt "):
                         player_move = moves["Mega Punch"]
-                        print("\nYou used Mega Punch. It dealt ", player_move, " damage.")
+                        print("\nYou used firebolt. It dealt ", player_move, " damage.")
                     elif player_move in ("3", "heal"):
                         heal_up = True # heal activated
                         player_move = moves["Heal"]
@@ -85,7 +87,7 @@ def main():
 
             else: # computer turn
 
-                move_miss = random.randint(1,5)
+                move_miss = random.randint(1,10)
                 if move_miss == 1:
                     miss = True
                 else:
@@ -107,8 +109,8 @@ def main():
                         elif player_health <= 35:
                             computer_move = moves["Mega Punch"] # FINISH HIM!
                             print("\nThe computer used Mega Punch. It dealt ", computer_move, " damage.")                       
-                    else: # if the computer has less than 30 health, there is a 50% chance they will heal
-                        heal_or_fight = random.randint(1,2) 
+                    else: # if the computer has less than 30 health, there is a 33.3% chance they will heal
+                        heal_or_fight = random.randint(1,3) 
                         if heal_or_fight == 1:
                             heal_up = True
                             computer_move = moves["Heal"]
@@ -159,12 +161,12 @@ def main():
 
         if winner == "Player":
             print("\nPlayer health: ", player_health, "Computer health: ", computer_health)
-            print("\nCongratulations! You have won. You're an animal!!")
+            print("\nCongratulations! You have won.")
         else:
             print("\nPlayer health: ", player_health, "Computer health: ", computer_health)
             print("\nSorry, but your opponent wiped the floor with you. Better luck next time.")
 
-        print("\nWould you like to play again?")
+        print("\nWould you like to play again? y/n")
 
         answer = input("> ").lower()
         if answer not in ("yes", "y"):

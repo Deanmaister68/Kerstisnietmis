@@ -1,1 +1,1 @@
-import combat 
+import combat.combat as combat 
