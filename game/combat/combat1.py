@@ -1,11 +1,11 @@
  # Turn Based Battle Simulator
 
 # Player and computer take turns to attack each other with different moves
-# until one is defeated.
-
+# until one is defeated. 
 import random
 import sys
-import combat_test
+
+sys.path.append(C:\Users\camie\Documents\GitHub\Kerstisnietmis\game\player\playername.py)
 
 
 def main():
@@ -166,7 +166,7 @@ def main():
             print("................................................................................")
             print("................................................................................")
             print("................................................................................")
-            print("???: Sow you lost... I thought you" + combat_test.playername + "were thougher than this but weaklings dissepoint")
+            print("???: Sow you lost... I thought you" + playername + "were thougher than this but weaklings dissepoint")
             print("???: But you wil get an other chance...")
             print("???: Restart your world and you will get your second chance... Dont waste it...")
             sys.exit()

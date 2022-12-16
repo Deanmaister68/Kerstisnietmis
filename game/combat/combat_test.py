@@ -1,9 +1,12 @@
-#test for combat input to main file
-playername= 8
-if __name__ == "__main__":
-    
+
+playername= str (input("What is your name? >"))
 
 
+
+
+
+
+while True:
     start =input("you wanne fight? y/n ")
 
     if start == "y":
@@ -12,4 +15,3 @@ if __name__ == "__main__":
         print("to bad.")
 
     print('tester')
-# conlusion it worked
