@@ -8,7 +8,6 @@ HP_PER_LEVEL = 10
 BASE_DAMAGE = 10
 DAMAGE_PER_LEVEL = 5
 
-
 skills = {
   "HP": 0,
   "Damage": 0,
@@ -50,20 +49,18 @@ def spend_skill_point():
         print("You have gained 10 HP")
       elif skill == "Damage":
         print("You have gained 1 Damage")
- 
+    else:
+
       print(f"You don't have the skill {skill}.")
   else:
 
     print("You don't have enough skill points to spend.")
 
-
+level_up()
+spend_skill_point()
 
 total_hp = BASE_HP + HP_PER_LEVEL * skills["HP"]
 total_damage = BASE_DAMAGE + DAMAGE_PER_LEVEL * skills["Damage"]
 
 print(f"Total HP: {total_hp}")
 print(f"Total Damage: {total_damage}")
-
-if __name__ == "__main__":
-  level_up()
-  spend_skill_point()
