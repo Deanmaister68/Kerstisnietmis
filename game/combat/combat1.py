@@ -4,6 +4,8 @@
 # until one is defeated. 
 import random
 import sys
+sys.path.insert(1 , "game/")
+from player import playername
 
 
 
@@ -166,7 +168,7 @@ def main():
             print("................................................................................")
             print("................................................................................")
             print("................................................................................")
-            print("???: Sow you lost... I thought you" "were thougher than this but weaklings dissepoint")
+            print("???: Sow you lost... I thought you " + playername + " were thougher than this but weaklings dissepoint")
             print("???: But you wil get an other chance...")
             print("???: Restart your world and you will get your second chance... Dont waste it...")
             sys.exit()

@@ -4,6 +4,8 @@
 # until one is defeated.
 
 import random
+import sys
+sys.path.insert(1 , "game/")
 
 
 def main():
