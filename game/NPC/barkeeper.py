@@ -1,4 +1,8 @@
 from colorama import Fore, Back, Style
+import random
+import sys
+sys.path.insert(1 , "game/")
+from player.playername import inputplayername
 
 print(Fore.BLUE + "Barkeeper:" + Fore.WHITE + " Welcome to the Frozen Casket traveller. How can I be of service?")
 
@@ -10,7 +14,7 @@ else:
     
 print(Fore.BLUE + "Barkeeper:" + Fore.WHITE + " Well traveller, what is you're story?")
 
-print("\n" + Fore.YELLOW + Input_playername + Fore.WHITE +  ": One day I was going for a walk in the woods till I heard a scream  coming from the house where me and my family lived. When I came back, I saw a horrific sight of my wife and children slaughtert by the orders of the evil king. Filled with rage I picked up an iron sword my father left me and started my quest of revenge. ")
+print("\n" + Fore.YELLOW + inputplayername + Fore.WHITE +  ": One day I was going for a walk in the woods till I heard a scream  coming from the house where me and my family lived. When I came back, I saw a horrific sight of my wife and children slaughtert by the orders of the evil king. Filled with rage I picked up an iron sword my father left me and started my quest of revenge. ")
 
 barkeepgift = input("\n" + Fore.BLUE + "Barkeeper:" + Fore.WHITE + "Im sorry for your los traveller. may i give you a gift? " + Fore.CYAN + "\nanswer ")
 if barkeepgift == "yes":

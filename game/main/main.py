@@ -12,5 +12,6 @@ print( Fore.CYAN + "???: " + " I will so you soon young traveller...\n Now wake 
 print( Fore.MAGENTA + "narator: You are in a tavern. You look around and see a few tables with some empty seats")
 print( Fore.MAGENTA + "narator: You see a man behind the bar. He is about 6 feet with grey hair and a slim fesyke")
 print( Fore.MAGENTA + "narator: You walk to the man and start speaking.")
+from NPC import barkeeper
 
 
