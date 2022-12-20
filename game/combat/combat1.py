@@ -1,7 +1,3 @@
- # Turn Based Battle Simulator
-
-# Player and computer take turns to attack each other with different moves
-# until one is defeated. 
 import random
 import sys
 sys.path.insert(1 , "game/")
