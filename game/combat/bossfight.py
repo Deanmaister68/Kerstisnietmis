@@ -23,8 +23,8 @@ def main():
 
     # Set up the play again loop
 
-    player_health = 150
-    computer_health = 180
+    player_health = 400
+    computer_health = 400
 
         # determine whose turn it is
     turn = random.randint(1,2) # heads or tails
@@ -35,10 +35,10 @@ def main():
     else:
             player_turn = False
             computer_turn = True
-            print("\nJack Frost will go first.")
+            print("\n will go first.")
 
 
-    print("\nPlayer health: ", player_health, "Jack Frost health: ", computer_health)
+    print("\nPlayer health: ", player_health, "Cursed Santa health: ", computer_health)
 
         # set up the main game loop
     while (player_health != 0 or computer_health != 0):
@@ -50,8 +50,8 @@ def main():
             moves = {"Sword slash": random.randint(35, 40),
                      "Firebolt": random.randint(15, 37),
                      "Heal": random.randint(20, 60),
-                     "Hellfrost": random.randint(35, 45),
-                     "neckbreaker": random.randint(15, 45),
+                     "a bag of presents": random.randint(35, 45),
+                     "The toy launcher": random.randint(15, 45),
                      "Heal": random.randint(20, 60)}
 
             if player_turn:
@@ -93,38 +93,38 @@ def main():
 
                 if miss:
                     computer_move = 0 # the computer misses and deals no damage
-                    print("Jack Frost missed!")
+                    print("Cursed Santa missed!")
                 else:
                     if computer_health > 30: 
                         if player_health > 75:
                             computer_move = moves["Hellfrost"]
-                            print("\nJack Frost used hellfrost. It dealt ", computer_move, " damage.")
+                            print("\nCursed Santa does a bag of presents. It dealt ", computer_move, " damage.")
                         elif player_health > 35 and player_health <= 75: # computer decides whether to go big or play it safe
-                            imoves = ["Hellfrost", "neckbreaker"]
+                            imoves = ["a bag of presents", "The toy launcher"]
                             imoves = random.choice(imoves)
                             computer_move = moves[imoves]
-                            print("\nJack Frost elf used ", imoves, ". It dealt ", computer_move, " damage.")
+                            print("\nCursed Santa used ", imoves, ". It dealt ", computer_move, " damage.")
                         elif player_health <= 35:
-                            computer_move = moves["neckbreaker"] # FINISH HIM!
-                            print("\nJack Frost used neckbreaker. It dealt ", computer_move, " damage.")                       
+                            computer_move = moves["The toy launcher"] # FINISH HIM!
+                            print("\nCursed Santa does The toy launcher. It dealt ", computer_move, " damage.")                       
                     else: # if the computer has less than 30 health, there is a 30% chance they will heal
                         heal_or_fight = random.randint(3,10) 
                         if heal_or_fight == 1:
                             heal_up = True
                             computer_move = moves["Heal"]
-                            print("\njack Frost used Heal. It healed for ", computer_move, " health.")
+                            print("\nCursed Santa used Heal. It healed for ", computer_move, " health.")
                         else:
                             if player_health > 75:
-                                computer_move = moves["Punch"]
-                                print("\njack Frost used Punch. It dealt ", computer_move, " damage.")
+                                computer_move = moves["a bag of presents"]
+                                print("\nCursed Santa does a bag of presents. It dealt ", computer_move, " damage.")
                             elif player_health > 35 and player_health <= 75:
-                                imoves = ["Hellfrost", "neckbreaker"]
+                                imoves = ["a bag of presents", "The toy launcher"]
                                 imoves = random.choice(imoves)
                                 computer_move = moves[imoves]
-                                print("\njack Frost used ", imoves, ". It dealt ", computer_move, " damage.")
+                                print("\nCursed Santa used ", imoves, ". It dealt ", computer_move, " damage.")
                             elif player_health <= 35:
-                                computer_move = moves["neckbreaker"] # FINISH HIM!
-                                print("\njack Frost used neckbreaker. It dealt ", computer_move, " damage.")
+                                computer_move = moves["The toy gun"] # FINISH HIM!
+                                print("\nCursed Santa used The toy launcher. It dealt ", computer_move, " damage.")
 
             if heal_up:
                 if player_turn:
@@ -146,10 +146,10 @@ def main():
                     player_health -= computer_move
                     if player_health < 0:
                         player_health = 0
-                        winner = "Jack Frost"
+                        winner = "Cursed Santa"
                         break
 
-            print("\nPlayer health: ", player_health, "jack Frost health: ", computer_health)
+            print("\nPlayer health: ", player_health, "Cursed Santa health: ", computer_health)
 
             # switch turns
             player_turn = not player_turn
@@ -158,10 +158,10 @@ def main():
         # once main game while loop breaks, determine winner and congratulate
 
     if winner == "Player":
-            print("\nPlayer health: ", player_health, "jack Frost health: ", computer_health)
+            print("\nPlayer health: ", player_health, "Cursed Santa health: ", computer_health)
             print("\nCongratulations! You have won.")
     else:   #DONT FORGET TO AJUST THIS TO LET IT SHOW SLOWER AND SHOW COLOUR!!!!! 
-            print("\nPlayer health: ", player_health, "jack Frost health: ", computer_health)
+            print("\nPlayer health: ", player_health, "Cursed Santa health: ", computer_health)
             print("\nSorry, but your opponent wiped the floor with you. Better luck next time.")
             print("................................................................................")
             print("................................................................................")
