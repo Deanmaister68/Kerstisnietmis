@@ -4,7 +4,7 @@
 # until one is defeated. 
 import random
 import sys
-
+sys.path.insert(1 , "game/")
 
 
 
@@ -42,7 +42,7 @@ def main():
 
         # set up the main game loop
     while (player_health != 0 or computer_health != 0):
-
+            global main
             heal_up = False # determine if heal has been used by the player. Resets false each loop.
             miss = False # determine if the chosen move will miss.
 
@@ -97,7 +97,7 @@ def main():
                 else:
                     if computer_health > 30: 
                         if player_health > 75:
-                            computer_move = moves["Hellfrost"]
+                            computer_move = moves["The toy launcher"]
                             print("\nCursed Santa does a bag of presents. It dealt ", computer_move, " damage.")
                         elif player_health > 35 and player_health <= 75: # computer decides whether to go big or play it safe
                             imoves = ["a bag of presents", "The toy launcher"]

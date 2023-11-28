@@ -167,11 +167,4 @@ def main():
         else:
             print("\nPlayer health: ", player_health, "Computer health: ", computer_health)
             print("\nSorry, but your opponent wiped the floor with you. Better luck next time.")
-
-        print("\nWould you like to play again? y/n")
-
-        answer = input("> ").lower()
-        if answer not in ("yes", "y"):
-            play_again = False
-
 main()

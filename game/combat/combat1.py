@@ -19,7 +19,6 @@ def main():
 
     
 
-    # Set up the play again loop
 
     player_health = 100
     computer_health = 100
